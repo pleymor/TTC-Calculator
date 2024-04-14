@@ -15,23 +15,26 @@
 }
 
 .container {
-  margin: 0;
-  padding-top: 10vh;
+  margin: auto;
+  padding-top: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  max-width: 20rem;
 }
 
 .logo {
   height: 6em;
+  width: 6em;
+  margin: auto  ;
   padding: 1.5em;
   will-change: filter;
   transition: 0.75s;
 }
 
-.logo.tauri:hover {
-  filter: drop-shadow(0 0 2em #24c8db);
+.logo:hover {
+  filter: drop-shadow(0 0 1em #24c8db);
 }
 
 .row {
@@ -84,10 +87,36 @@ button {
   outline: none;
 }
 
-#greet-input {
+#ht-input {
   margin-right: 5px;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Price card */
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  margin: 0.5em 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  color: #0f0f0f;
+}
+
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
     color: #f6f6f6;
@@ -105,5 +134,10 @@ button {
   }
   button:active {
     background-color: #0f0f0f69;
+  }
+
+  .card {
+    background-color: #0f0f0f69;
+    color: #f6f6f6;
   }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tauri App</title>
+    <title>TTC Calculator</title>
     <script type="module" src="/main.js" defer></script>
     <style>
       .logo.vanilla:hover {
@@ -15,32 +15,30 @@
 
   <body>
     <div class="container">
-      <h1>Welcome to Tauri!</h1>
+      <img src="/assets/logo.png" class="logo" alt="TTC calc logo" />
 
-      <div class="row">
-        <a href="https://tauri.app" target="_blank">
-          <img src="/assets/tauri.svg" class="logo tauri" alt="Tauri logo" />
-        </a>
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-          target="_blank"
-        >
-          <img
-            src="/assets/javascript.svg"
-            class="logo vanilla"
-            alt="JavaScript logo"
-          />
-        </a>
+      <input
+        id="ht-input"
+        type="number"
+        step="0.01"
+        placeholder="Montant HT"
+        onkeyup="if(value<0) value=0;if(value>999_999_999_999_999) value=999_999_999_999_999;"
+      />
+
+      <div class="card">
+        <h2>HT</h2>
+        <span id="ht"></span>
       </div>
 
-      <p>Click on the Tauri logo to learn more about the framework</p>
+      <div class="card">
+        <h2>TVA</h2>
+        <span id="tva"></span>
+      </div>
 
-      <form class="row" id="greet-form">
-        <input id="greet-input" placeholder="Enter a name..." />
-        <button type="submit">Greet</button>
-      </form>
-
-      <p id="greet-msg"></p>
+      <div class="card">
+        <h2>TTC</h2>
+        <span id="ttc"></span>
+      </div>
     </div>
   </body>
 </html>

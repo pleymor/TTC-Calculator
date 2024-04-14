@@ -11,3 +11,9 @@ This template should help get you started developing with Tauri in vanilla HTML,
 ```sh
 $ cargo tauri dev
 ```
+
+# Build
+
+```sh
+$ cargo tauri build
+```
