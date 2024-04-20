@@ -1,6 +1,8 @@
-# Tauri + Vanilla
+# TTC Calculator (Tauri + Vanilla)
 
-This template should help get you started developing with Tauri in vanilla HTML, CSS and Javascript.
+Desktop TVA and TTC calculator, written in rust and tauri (vanilla).
+
+![alt text](image.png)
 
 ## Recommended IDE Setup
 
