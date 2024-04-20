@@ -37,4 +37,21 @@ window.addEventListener("DOMContentLoaded", () => {
   
   // At every input change, compute the TTC
   document.querySelector("#ht-input").addEventListener("input", computeTtc);
+
+  // At click on a card, copy the value 
+  // of the child .amount to the buffer
+  document.querySelectorAll(".card").forEach((card) => {
+    card.addEventListener("click", (event) => {
+      const value = event.target.querySelector(".amount").textContent;
+      navigator.clipboard.writeText(value);
+
+      // display a toast
+      const label = event.target.querySelector("h2").textContent;
+      const toast = document.createElement("div");
+      toast.classList.add("toast");
+      toast.textContent = `${label} "${value}" copié dans le presse-papier`
+      document.body.appendChild(toast);
+      setTimeout(() => { toast.remove() }, 2000);
+    });
+  });
 });
